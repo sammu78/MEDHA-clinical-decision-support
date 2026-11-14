@@ -176,6 +176,42 @@ Access the clinical user interface at:
 
 ---
 
+## 🚀 Deploying to Render
+
+This project is pre-configured with a Render Blueprint (`render.yaml`) for 1-click zero-config deployment.
+
+### Option A: 1-Click Blueprint (Recommended)
+1. Go to your [Render Dashboard](https://dashboard.render.com/).
+2. Click **New +** → **Blueprint**.
+3. Connect your GitHub repository (`sammu78/MEDHA-clinical-decision-support`).
+4. Render will automatically parse `render.yaml` and provision both:
+   - **`medha-backend`** (Web Service): Runs FastAPI on Python with Uvicorn.
+   - **`medha-frontend`** (Static Site): Builds React + Vite and serves via CDN, auto-wired to `medha-backend`.
+5. Click **Apply**. Render will build and deploy both services!
+
+### Option B: Manual Service Creation
+If you prefer creating the services manually in Render:
+
+#### 1. Backend Web Service:
+* **Type:** Web Service
+* **Name:** `medha-backend`
+* **Root Directory:** `backend`
+* **Environment:** `Python`
+* **Build Command:** `pip install -r requirements.txt`
+* **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+* **Environment Variables:** `PYTHON_VERSION` = `3.10.10`
+
+#### 2. Frontend Static Site:
+* **Type:** Static Site
+* **Name:** `medha-frontend`
+* **Root Directory:** `frontend`
+* **Build Command:** `npm install && npm run build`
+* **Publish Directory:** `dist`
+* **Rewrite Rule:** Source `/*` → Destination `/index.html`
+* **Environment Variable:** `VITE_API_BASE_URL` = `https://<your-backend-slug>.onrender.com`
+
+---
+
 ## 🧪 Data Audit & Pipeline Summary
 
 A comprehensive data audit was conducted and saved to [`reports/data_audit.md`](file:///c:/Users/Sameer/OneDrive/Desktop/final/reports/data_audit.md).

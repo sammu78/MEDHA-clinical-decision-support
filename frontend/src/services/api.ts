@@ -11,7 +11,15 @@ import type {
   DashboardMetrics
 } from "../types";
 
-const API_BASE_URL = "http://127.0.0.1:8000";
+const rawBaseUrl = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL =
+  rawBaseUrl !== undefined && rawBaseUrl !== ""
+    ? rawBaseUrl.startsWith("http://") || rawBaseUrl.startsWith("https://")
+      ? rawBaseUrl
+      : `https://${rawBaseUrl}`
+    : import.meta.env.DEV
+    ? "http://127.0.0.1:8000"
+    : "";
 
 export async function checkBackendHealth(): Promise<{ status: string; service: string }> {
   const res = await fetch(`${API_BASE_URL}/health`);
