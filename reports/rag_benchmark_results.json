@@ -1,0 +1,849 @@
+{
+  "benchmark_meta": {
+    "version": "1.0.0",
+    "query_count": 15,
+    "date": "2026-10-27 21:36:52 UTC"
+  },
+  "configurations": {
+    "BM25_Lexical_Only": {
+      "configuration": "BM25_Lexical_Only",
+      "alpha_dense_weight": 0.0,
+      "queries_evaluated": 15,
+      "failure_count": 0,
+      "failure_rate": 0.0,
+      "mean_recall_at_1": 0.9333,
+      "mean_recall_at_3": 0.9667,
+      "mean_recall_at_5": 1.0,
+      "mean_precision_at_1": 1.0,
+      "mean_precision_at_3": 0.3556,
+      "mean_precision_at_5": 0.2267,
+      "mean_mrr": 1.0,
+      "mean_ndcg_at_3": 0.986,
+      "mean_ndcg_at_5": 0.9939,
+      "latency_stats_ms": {
+        "median": 0.16,
+        "mean": 0.36,
+        "p95": 1.11
+      },
+      "query_details": [
+        {
+          "query_id": "Q_T2D_RENAL",
+          "retrieved_chunk_ids": [
+            "ICMR_T2D_01",
+            "IGH_IV_HTN_01",
+            "ICMR_DENGUE_01",
+            "CDSCO_ACEI_SAFETY",
+            "IRA_ARTHRITIS_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_T2D_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_T2D_INPATIENT_HYPO",
+          "retrieved_chunk_ids": [
+            "ADA_T2D_INPATIENT",
+            "ICMR_DENGUE_01",
+            "ICMR_T2D_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_CAP_01"
+          ],
+          "gold_chunk_ids": [
+            "ADA_T2D_INPATIENT",
+            "ICMR_T2D_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.6667,
+          "ndcg_at_3": 0.9639
+        },
+        {
+          "query_id": "Q_HTN_INITIATION",
+          "retrieved_chunk_ids": [
+            "IGH_IV_HTN_01",
+            "ICMR_TYPHOID_01",
+            "NVBDCP_VL_01",
+            "NTEP_TB_01",
+            "NVBDCP_MALARIA_01"
+          ],
+          "gold_chunk_ids": [
+            "IGH_IV_HTN_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_HTN_LISINOPRIL_RENAL",
+          "retrieved_chunk_ids": [
+            "CDSCO_ACEI_SAFETY",
+            "ICMR_T2D_01",
+            "IRA_ARTHRITIS_01",
+            "IGH_IV_HTN_01",
+            "ICMR_CAP_01"
+          ],
+          "gold_chunk_ids": [
+            "CDSCO_ACEI_SAFETY",
+            "IGH_IV_HTN_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 0.5,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 0.8262
+        },
+        {
+          "query_id": "Q_MALARIA_TREATMENT",
+          "retrieved_chunk_ids": [
+            "NVBDCP_MALARIA_01",
+            "ICMR_TYPHOID_01",
+            "NVBDCP_VL_01",
+            "IGH_IV_HTN_01",
+            "ICMR_DENGUE_01"
+          ],
+          "gold_chunk_ids": [
+            "NVBDCP_MALARIA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_TB_HEPATOTOXICITY",
+          "retrieved_chunk_ids": [
+            "NTEP_TB_01",
+            "CDSCO_ACEI_SAFETY",
+            "ICMR_T2D_01",
+            "IADVL_TINEA_01",
+            "ICMR_ASTHMA_01"
+          ],
+          "gold_chunk_ids": [
+            "NTEP_TB_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_DENGUE_NSAID",
+          "retrieved_chunk_ids": [
+            "ICMR_DENGUE_01",
+            "ICMR_TYPHOID_01",
+            "ICMR_ASTHMA_01",
+            "IRA_ARTHRITIS_01",
+            "NTEP_TB_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_DENGUE_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_PNEUMONIA_ANTIBIOTIC",
+          "retrieved_chunk_ids": [
+            "ICMR_CAP_01",
+            "ICMR_TYPHOID_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "NVBDCP_VL_01",
+            "ICMR_ASTHMA_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_CAP_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_TYPHOID_AZITHROMYCIN",
+          "retrieved_chunk_ids": [
+            "ICMR_TYPHOID_01",
+            "ICMR_CAP_01",
+            "ICMR_DENGUE_01",
+            "ICMR_T2D_01",
+            "NTEP_TB_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_TYPHOID_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_ANEMIA_IRON",
+          "retrieved_chunk_ids": [
+            "AMB_ANEMIA_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_ASTHMA_01",
+            "ICMR_DENGUE_01",
+            "NVBDCP_VL_01"
+          ],
+          "gold_chunk_ids": [
+            "AMB_ANEMIA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_DERM_TINEA",
+          "retrieved_chunk_ids": [
+            "IADVL_TINEA_01",
+            "ICMR_ASTHMA_01",
+            "ICMR_DENGUE_01",
+            "NVBDCP_VL_01",
+            "ADA_T2D_INPATIENT"
+          ],
+          "gold_chunk_ids": [
+            "IADVL_TINEA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_DEFICIENCY_VITAMINS",
+          "retrieved_chunk_ids": [
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_DENGUE_01",
+            "NVBDCP_VL_01",
+            "ICMR_ASTHMA_01",
+            "IRA_ARTHRITIS_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_NIN_MICRONUTRIENTS"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_ASTHMA_MAINTENANCE",
+          "retrieved_chunk_ids": [
+            "ICMR_ASTHMA_01",
+            "IRA_ARTHRITIS_01",
+            "ICMR_DENGUE_01",
+            "NVBDCP_VL_01",
+            "IGH_IV_HTN_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_ASTHMA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_ARTHRITIS_METHOTREXATE",
+          "retrieved_chunk_ids": [
+            "IRA_ARTHRITIS_01",
+            "AMB_ANEMIA_01",
+            "NTEP_TB_01",
+            "ICMR_CAP_01",
+            "ICMR_ASTHMA_01"
+          ],
+          "gold_chunk_ids": [
+            "IRA_ARTHRITIS_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_KALA_AZAR_AMPHOTERICIN",
+          "retrieved_chunk_ids": [
+            "NVBDCP_VL_01",
+            "IGH_IV_HTN_01",
+            "ICMR_TYPHOID_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_T2D_01"
+          ],
+          "gold_chunk_ids": [
+            "NVBDCP_VL_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        }
+      ]
+    },
+    "Vector_Dense_Only": {
+      "configuration": "Vector_Dense_Only",
+      "alpha_dense_weight": 1.0,
+      "queries_evaluated": 15,
+      "failure_count": 0,
+      "failure_rate": 0.0,
+      "mean_recall_at_1": 0.9333,
+      "mean_recall_at_3": 0.9333,
+      "mean_recall_at_5": 0.9333,
+      "mean_precision_at_1": 1.0,
+      "mean_precision_at_3": 0.3333,
+      "mean_precision_at_5": 0.2,
+      "mean_mrr": 1.0,
+      "mean_ndcg_at_3": 0.9768,
+      "mean_ndcg_at_5": 0.9768,
+      "latency_stats_ms": {
+        "median": 0.16,
+        "mean": 0.17,
+        "p95": 0.24
+      },
+      "query_details": [
+        {
+          "query_id": "Q_T2D_RENAL",
+          "retrieved_chunk_ids": [
+            "ICMR_T2D_01",
+            "CDSCO_ACEI_SAFETY",
+            "NVBDCP_VL_01",
+            "IRA_ARTHRITIS_01",
+            "ICMR_DENGUE_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_T2D_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_T2D_INPATIENT_HYPO",
+          "retrieved_chunk_ids": [
+            "ADA_T2D_INPATIENT",
+            "ICMR_DENGUE_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_CAP_01",
+            "ICMR_ASTHMA_01"
+          ],
+          "gold_chunk_ids": [
+            "ADA_T2D_INPATIENT",
+            "ICMR_T2D_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 0.5,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 0.8262
+        },
+        {
+          "query_id": "Q_HTN_INITIATION",
+          "retrieved_chunk_ids": [
+            "IGH_IV_HTN_01",
+            "NVBDCP_VL_01",
+            "ICMR_TYPHOID_01",
+            "ICMR_DENGUE_01",
+            "NTEP_TB_01"
+          ],
+          "gold_chunk_ids": [
+            "IGH_IV_HTN_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_HTN_LISINOPRIL_RENAL",
+          "retrieved_chunk_ids": [
+            "CDSCO_ACEI_SAFETY",
+            "ICMR_ASTHMA_01",
+            "NVBDCP_VL_01",
+            "IRA_ARTHRITIS_01",
+            "ICMR_T2D_01"
+          ],
+          "gold_chunk_ids": [
+            "CDSCO_ACEI_SAFETY",
+            "IGH_IV_HTN_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 0.5,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 0.8262
+        },
+        {
+          "query_id": "Q_MALARIA_TREATMENT",
+          "retrieved_chunk_ids": [
+            "NVBDCP_MALARIA_01",
+            "NVBDCP_VL_01",
+            "ICMR_DENGUE_01",
+            "IRA_ARTHRITIS_01",
+            "ICMR_TYPHOID_01"
+          ],
+          "gold_chunk_ids": [
+            "NVBDCP_MALARIA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_TB_HEPATOTOXICITY",
+          "retrieved_chunk_ids": [
+            "NTEP_TB_01",
+            "ICMR_T2D_01",
+            "NVBDCP_VL_01",
+            "IADVL_TINEA_01",
+            "CDSCO_ACEI_SAFETY"
+          ],
+          "gold_chunk_ids": [
+            "NTEP_TB_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_DENGUE_NSAID",
+          "retrieved_chunk_ids": [
+            "ICMR_DENGUE_01",
+            "ICMR_TYPHOID_01",
+            "ICMR_ASTHMA_01",
+            "ADA_T2D_INPATIENT",
+            "ICMR_CAP_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_DENGUE_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_PNEUMONIA_ANTIBIOTIC",
+          "retrieved_chunk_ids": [
+            "ICMR_CAP_01",
+            "NVBDCP_VL_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_DENGUE_01",
+            "ICMR_T2D_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_CAP_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_TYPHOID_AZITHROMYCIN",
+          "retrieved_chunk_ids": [
+            "ICMR_TYPHOID_01",
+            "ICMR_CAP_01",
+            "ICMR_DENGUE_01",
+            "ICMR_T2D_01",
+            "CDSCO_ACEI_SAFETY"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_TYPHOID_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_ANEMIA_IRON",
+          "retrieved_chunk_ids": [
+            "AMB_ANEMIA_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_ASTHMA_01",
+            "CDSCO_ACEI_SAFETY",
+            "ICMR_DENGUE_01"
+          ],
+          "gold_chunk_ids": [
+            "AMB_ANEMIA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_DERM_TINEA",
+          "retrieved_chunk_ids": [
+            "IADVL_TINEA_01",
+            "ICMR_ASTHMA_01",
+            "ICMR_DENGUE_01",
+            "NVBDCP_VL_01",
+            "CDSCO_ACEI_SAFETY"
+          ],
+          "gold_chunk_ids": [
+            "IADVL_TINEA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_DEFICIENCY_VITAMINS",
+          "retrieved_chunk_ids": [
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_DENGUE_01",
+            "NVBDCP_VL_01",
+            "ICMR_ASTHMA_01",
+            "IRA_ARTHRITIS_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_NIN_MICRONUTRIENTS"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_ASTHMA_MAINTENANCE",
+          "retrieved_chunk_ids": [
+            "ICMR_ASTHMA_01",
+            "IRA_ARTHRITIS_01",
+            "NVBDCP_VL_01",
+            "ICMR_DENGUE_01",
+            "CDSCO_ACEI_SAFETY"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_ASTHMA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_ARTHRITIS_METHOTREXATE",
+          "retrieved_chunk_ids": [
+            "IRA_ARTHRITIS_01",
+            "AMB_ANEMIA_01",
+            "ICMR_ASTHMA_01",
+            "ICMR_CAP_01",
+            "ADA_T2D_INPATIENT"
+          ],
+          "gold_chunk_ids": [
+            "IRA_ARTHRITIS_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_KALA_AZAR_AMPHOTERICIN",
+          "retrieved_chunk_ids": [
+            "NVBDCP_VL_01",
+            "IGH_IV_HTN_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_TYPHOID_01",
+            "ICMR_T2D_01"
+          ],
+          "gold_chunk_ids": [
+            "NVBDCP_VL_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        }
+      ]
+    },
+    "Hybrid_BM25_Dense": {
+      "configuration": "Hybrid_BM25_Dense",
+      "alpha_dense_weight": 0.5,
+      "queries_evaluated": 15,
+      "failure_count": 0,
+      "failure_rate": 0.0,
+      "mean_recall_at_1": 0.9333,
+      "mean_recall_at_3": 0.9333,
+      "mean_recall_at_5": 0.9667,
+      "mean_precision_at_1": 1.0,
+      "mean_precision_at_3": 0.3333,
+      "mean_precision_at_5": 0.2133,
+      "mean_mrr": 1.0,
+      "mean_ndcg_at_3": 0.9768,
+      "mean_ndcg_at_5": 0.9839,
+      "latency_stats_ms": {
+        "median": 0.18,
+        "mean": 0.21,
+        "p95": 0.35
+      },
+      "query_details": [
+        {
+          "query_id": "Q_T2D_RENAL",
+          "retrieved_chunk_ids": [
+            "ICMR_T2D_01",
+            "IGH_IV_HTN_01",
+            "ICMR_DENGUE_01",
+            "CDSCO_ACEI_SAFETY",
+            "IRA_ARTHRITIS_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_T2D_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_T2D_INPATIENT_HYPO",
+          "retrieved_chunk_ids": [
+            "ADA_T2D_INPATIENT",
+            "ICMR_DENGUE_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_CAP_01",
+            "ICMR_T2D_01"
+          ],
+          "gold_chunk_ids": [
+            "ADA_T2D_INPATIENT",
+            "ICMR_T2D_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 0.5,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 0.8262
+        },
+        {
+          "query_id": "Q_HTN_INITIATION",
+          "retrieved_chunk_ids": [
+            "IGH_IV_HTN_01",
+            "ICMR_TYPHOID_01",
+            "NVBDCP_VL_01",
+            "NTEP_TB_01",
+            "NVBDCP_MALARIA_01"
+          ],
+          "gold_chunk_ids": [
+            "IGH_IV_HTN_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_HTN_LISINOPRIL_RENAL",
+          "retrieved_chunk_ids": [
+            "CDSCO_ACEI_SAFETY",
+            "ICMR_T2D_01",
+            "IRA_ARTHRITIS_01",
+            "ICMR_ASTHMA_01",
+            "NVBDCP_VL_01"
+          ],
+          "gold_chunk_ids": [
+            "CDSCO_ACEI_SAFETY",
+            "IGH_IV_HTN_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 0.5,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 0.8262
+        },
+        {
+          "query_id": "Q_MALARIA_TREATMENT",
+          "retrieved_chunk_ids": [
+            "NVBDCP_MALARIA_01",
+            "ICMR_TYPHOID_01",
+            "NVBDCP_VL_01",
+            "IGH_IV_HTN_01",
+            "ICMR_DENGUE_01"
+          ],
+          "gold_chunk_ids": [
+            "NVBDCP_MALARIA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_TB_HEPATOTOXICITY",
+          "retrieved_chunk_ids": [
+            "NTEP_TB_01",
+            "ICMR_T2D_01",
+            "CDSCO_ACEI_SAFETY",
+            "IADVL_TINEA_01",
+            "NVBDCP_VL_01"
+          ],
+          "gold_chunk_ids": [
+            "NTEP_TB_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_DENGUE_NSAID",
+          "retrieved_chunk_ids": [
+            "ICMR_DENGUE_01",
+            "ICMR_TYPHOID_01",
+            "ICMR_ASTHMA_01",
+            "IRA_ARTHRITIS_01",
+            "ADA_T2D_INPATIENT"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_DENGUE_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_PNEUMONIA_ANTIBIOTIC",
+          "retrieved_chunk_ids": [
+            "ICMR_CAP_01",
+            "NVBDCP_VL_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_TYPHOID_01",
+            "ICMR_DENGUE_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_CAP_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_TYPHOID_AZITHROMYCIN",
+          "retrieved_chunk_ids": [
+            "ICMR_TYPHOID_01",
+            "ICMR_CAP_01",
+            "ICMR_DENGUE_01",
+            "ICMR_T2D_01",
+            "NVBDCP_VL_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_TYPHOID_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_ANEMIA_IRON",
+          "retrieved_chunk_ids": [
+            "AMB_ANEMIA_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_ASTHMA_01",
+            "ICMR_DENGUE_01",
+            "NVBDCP_VL_01"
+          ],
+          "gold_chunk_ids": [
+            "AMB_ANEMIA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_DERM_TINEA",
+          "retrieved_chunk_ids": [
+            "IADVL_TINEA_01",
+            "ICMR_ASTHMA_01",
+            "ICMR_DENGUE_01",
+            "NVBDCP_VL_01",
+            "ADA_T2D_INPATIENT"
+          ],
+          "gold_chunk_ids": [
+            "IADVL_TINEA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_DEFICIENCY_VITAMINS",
+          "retrieved_chunk_ids": [
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_DENGUE_01",
+            "NVBDCP_VL_01",
+            "ICMR_ASTHMA_01",
+            "IRA_ARTHRITIS_01"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_NIN_MICRONUTRIENTS"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_ASTHMA_MAINTENANCE",
+          "retrieved_chunk_ids": [
+            "ICMR_ASTHMA_01",
+            "IRA_ARTHRITIS_01",
+            "NVBDCP_VL_01",
+            "ICMR_DENGUE_01",
+            "CDSCO_ACEI_SAFETY"
+          ],
+          "gold_chunk_ids": [
+            "ICMR_ASTHMA_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_ARTHRITIS_METHOTREXATE",
+          "retrieved_chunk_ids": [
+            "IRA_ARTHRITIS_01",
+            "AMB_ANEMIA_01",
+            "ICMR_ASTHMA_01",
+            "ICMR_CAP_01",
+            "ADA_T2D_INPATIENT"
+          ],
+          "gold_chunk_ids": [
+            "IRA_ARTHRITIS_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        },
+        {
+          "query_id": "Q_KALA_AZAR_AMPHOTERICIN",
+          "retrieved_chunk_ids": [
+            "NVBDCP_VL_01",
+            "IGH_IV_HTN_01",
+            "ICMR_TYPHOID_01",
+            "ICMR_NIN_MICRONUTRIENTS",
+            "ICMR_T2D_01"
+          ],
+          "gold_chunk_ids": [
+            "NVBDCP_VL_01"
+          ],
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "precision_at_3": 0.3333,
+          "ndcg_at_3": 1.0
+        }
+      ]
+    }
+  }
+}

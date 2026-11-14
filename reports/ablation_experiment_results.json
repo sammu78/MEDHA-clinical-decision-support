@@ -1,0 +1,650 @@
+{
+  "experiment_meta": {
+    "runner": "scripts/run_ablation_experiments.py",
+    "date": "2026-10-27 21:57:59 UTC",
+    "dataset": "Standardized Clinical Test Benchmark (8 Representative Scenarios)",
+    "safety_gate_version": "2.1.0-IndianClinicalPractice"
+  },
+  "results": {
+    "CONFIG_A_FULL": {
+      "config_id": "CONFIG_A_FULL",
+      "config_name": "Full System (ML + Hybrid RAG + Safety Gating + SHAP)",
+      "parameters": {
+        "enable_rag": true,
+        "enable_ml": true,
+        "enable_shap": true,
+        "retrieval_alpha": 0.5,
+        "safety_fault_injection": false
+      },
+      "cases_evaluated": 8,
+      "metrics": {
+        "proposals_generated": 24,
+        "authorized_doses": 5,
+        "withheld_doses": 19,
+        "safety_blocks_triggered": 6,
+        "unexpected_authorizations": 0,
+        "citations_attached": 16,
+        "shap_explanations_present": 5,
+        "safe_withholding_rate": 0.792
+      },
+      "case_logs": [
+        {
+          "case_id": "CASE_T2D_NORMAL",
+          "safety_authorized": true,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_SEVERE_CKD",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_HYPOGLYCEMIA",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_HTN_HYPERKALEMIA",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_DENGUE_FEVER",
+          "safety_authorized": true,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_ASTHMA_PROPRANOLOL",
+          "safety_authorized": false,
+          "proposals_count": 4,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_PEDIATRIC_VIRAL_ASPIRIN",
+          "safety_authorized": false,
+          "proposals_count": 5,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_MISSING_CREATININE",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": true
+        }
+      ]
+    },
+    "CONFIG_B_NO_RAG": {
+      "config_id": "CONFIG_B_NO_RAG",
+      "config_name": "Ablation: No RAG Evidence Retrieval",
+      "parameters": {
+        "enable_rag": false,
+        "enable_ml": true,
+        "enable_shap": true,
+        "retrieval_alpha": 0.5,
+        "safety_fault_injection": false
+      },
+      "cases_evaluated": 8,
+      "metrics": {
+        "proposals_generated": 24,
+        "authorized_doses": 5,
+        "withheld_doses": 19,
+        "safety_blocks_triggered": 6,
+        "unexpected_authorizations": 0,
+        "citations_attached": 0,
+        "shap_explanations_present": 5,
+        "safe_withholding_rate": 0.792
+      },
+      "case_logs": [
+        {
+          "case_id": "CASE_T2D_NORMAL",
+          "safety_authorized": true,
+          "proposals_count": 3,
+          "citations_count": 0,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_SEVERE_CKD",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 0,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_HYPOGLYCEMIA",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 0,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_HTN_HYPERKALEMIA",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 0,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_DENGUE_FEVER",
+          "safety_authorized": true,
+          "proposals_count": 2,
+          "citations_count": 0,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_ASTHMA_PROPRANOLOL",
+          "safety_authorized": false,
+          "proposals_count": 4,
+          "citations_count": 0,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_PEDIATRIC_VIRAL_ASPIRIN",
+          "safety_authorized": false,
+          "proposals_count": 5,
+          "citations_count": 0,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_MISSING_CREATININE",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 0,
+          "shap_available": true
+        }
+      ]
+    },
+    "CONFIG_C_NO_ML": {
+      "config_id": "CONFIG_C_NO_ML",
+      "config_name": "Ablation: Rule-Only Baseline (No ML Models)",
+      "parameters": {
+        "enable_rag": true,
+        "enable_ml": false,
+        "enable_shap": true,
+        "retrieval_alpha": 0.5,
+        "safety_fault_injection": false
+      },
+      "cases_evaluated": 8,
+      "metrics": {
+        "proposals_generated": 24,
+        "authorized_doses": 5,
+        "withheld_doses": 19,
+        "safety_blocks_triggered": 6,
+        "unexpected_authorizations": 0,
+        "citations_attached": 16,
+        "shap_explanations_present": 0,
+        "safe_withholding_rate": 0.792
+      },
+      "case_logs": [
+        {
+          "case_id": "CASE_T2D_NORMAL",
+          "safety_authorized": true,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_T2D_SEVERE_CKD",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_T2D_HYPOGLYCEMIA",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_HTN_HYPERKALEMIA",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_DENGUE_FEVER",
+          "safety_authorized": true,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_ASTHMA_PROPRANOLOL",
+          "safety_authorized": false,
+          "proposals_count": 4,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_PEDIATRIC_VIRAL_ASPIRIN",
+          "safety_authorized": false,
+          "proposals_count": 5,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_MISSING_CREATININE",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        }
+      ]
+    },
+    "CONFIG_D_NO_SHAP": {
+      "config_id": "CONFIG_D_NO_SHAP",
+      "config_name": "Ablation: No SHAP Feature Explanations",
+      "parameters": {
+        "enable_rag": true,
+        "enable_ml": true,
+        "enable_shap": false,
+        "retrieval_alpha": 0.5,
+        "safety_fault_injection": false
+      },
+      "cases_evaluated": 8,
+      "metrics": {
+        "proposals_generated": 24,
+        "authorized_doses": 5,
+        "withheld_doses": 19,
+        "safety_blocks_triggered": 6,
+        "unexpected_authorizations": 0,
+        "citations_attached": 16,
+        "shap_explanations_present": 0,
+        "safe_withholding_rate": 0.792
+      },
+      "case_logs": [
+        {
+          "case_id": "CASE_T2D_NORMAL",
+          "safety_authorized": true,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_T2D_SEVERE_CKD",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_T2D_HYPOGLYCEMIA",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_HTN_HYPERKALEMIA",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_DENGUE_FEVER",
+          "safety_authorized": true,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_ASTHMA_PROPRANOLOL",
+          "safety_authorized": false,
+          "proposals_count": 4,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_PEDIATRIC_VIRAL_ASPIRIN",
+          "safety_authorized": false,
+          "proposals_count": 5,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_MISSING_CREATININE",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        }
+      ]
+    },
+    "CONFIG_E_BM25_ONLY": {
+      "config_id": "CONFIG_E_BM25_ONLY",
+      "config_name": "Ablation: BM25-Only Retrieval (alpha=0.0)",
+      "parameters": {
+        "enable_rag": true,
+        "enable_ml": true,
+        "enable_shap": true,
+        "retrieval_alpha": 0.0,
+        "safety_fault_injection": false
+      },
+      "cases_evaluated": 8,
+      "metrics": {
+        "proposals_generated": 24,
+        "authorized_doses": 5,
+        "withheld_doses": 19,
+        "safety_blocks_triggered": 6,
+        "unexpected_authorizations": 0,
+        "citations_attached": 16,
+        "shap_explanations_present": 5,
+        "safe_withholding_rate": 0.792
+      },
+      "case_logs": [
+        {
+          "case_id": "CASE_T2D_NORMAL",
+          "safety_authorized": true,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_SEVERE_CKD",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_HYPOGLYCEMIA",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_HTN_HYPERKALEMIA",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_DENGUE_FEVER",
+          "safety_authorized": true,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_ASTHMA_PROPRANOLOL",
+          "safety_authorized": false,
+          "proposals_count": 4,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_PEDIATRIC_VIRAL_ASPIRIN",
+          "safety_authorized": false,
+          "proposals_count": 5,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_MISSING_CREATININE",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": true
+        }
+      ]
+    },
+    "CONFIG_F_VECTOR_ONLY": {
+      "config_id": "CONFIG_F_VECTOR_ONLY",
+      "config_name": "Ablation: Vector-Only Retrieval (alpha=1.0)",
+      "parameters": {
+        "enable_rag": true,
+        "enable_ml": true,
+        "enable_shap": true,
+        "retrieval_alpha": 1.0,
+        "safety_fault_injection": false
+      },
+      "cases_evaluated": 8,
+      "metrics": {
+        "proposals_generated": 24,
+        "authorized_doses": 5,
+        "withheld_doses": 19,
+        "safety_blocks_triggered": 6,
+        "unexpected_authorizations": 0,
+        "citations_attached": 16,
+        "shap_explanations_present": 5,
+        "safe_withholding_rate": 0.792
+      },
+      "case_logs": [
+        {
+          "case_id": "CASE_T2D_NORMAL",
+          "safety_authorized": true,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_SEVERE_CKD",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_HYPOGLYCEMIA",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_HTN_HYPERKALEMIA",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_DENGUE_FEVER",
+          "safety_authorized": true,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_ASTHMA_PROPRANOLOL",
+          "safety_authorized": false,
+          "proposals_count": 4,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_PEDIATRIC_VIRAL_ASPIRIN",
+          "safety_authorized": false,
+          "proposals_count": 5,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_MISSING_CREATININE",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": true
+        }
+      ]
+    },
+    "CONFIG_G_HYBRID": {
+      "config_id": "CONFIG_G_HYBRID",
+      "config_name": "Ablation: Hybrid Retrieval (alpha=0.5)",
+      "parameters": {
+        "enable_rag": true,
+        "enable_ml": true,
+        "enable_shap": true,
+        "retrieval_alpha": 0.5,
+        "safety_fault_injection": false
+      },
+      "cases_evaluated": 8,
+      "metrics": {
+        "proposals_generated": 24,
+        "authorized_doses": 5,
+        "withheld_doses": 19,
+        "safety_blocks_triggered": 6,
+        "unexpected_authorizations": 0,
+        "citations_attached": 16,
+        "shap_explanations_present": 5,
+        "safe_withholding_rate": 0.792
+      },
+      "case_logs": [
+        {
+          "case_id": "CASE_T2D_NORMAL",
+          "safety_authorized": true,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_SEVERE_CKD",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_HYPOGLYCEMIA",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_HTN_HYPERKALEMIA",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_DENGUE_FEVER",
+          "safety_authorized": true,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_ASTHMA_PROPRANOLOL",
+          "safety_authorized": false,
+          "proposals_count": 4,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_PEDIATRIC_VIRAL_ASPIRIN",
+          "safety_authorized": false,
+          "proposals_count": 5,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_MISSING_CREATININE",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": true
+        }
+      ]
+    },
+    "CONFIG_H_SAFETY_FAULT": {
+      "config_id": "CONFIG_H_SAFETY_FAULT",
+      "config_name": "Safety Fault-Injection: Simulated Engine Failure",
+      "parameters": {
+        "enable_rag": true,
+        "enable_ml": true,
+        "enable_shap": true,
+        "retrieval_alpha": 0.5,
+        "safety_fault_injection": true
+      },
+      "cases_evaluated": 8,
+      "metrics": {
+        "proposals_generated": 24,
+        "authorized_doses": 0,
+        "withheld_doses": 24,
+        "safety_blocks_triggered": 8,
+        "unexpected_authorizations": 0,
+        "citations_attached": 16,
+        "shap_explanations_present": 5,
+        "safe_withholding_rate": 1.0
+      },
+      "case_logs": [
+        {
+          "case_id": "CASE_T2D_NORMAL",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_SEVERE_CKD",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_T2D_HYPOGLYCEMIA",
+          "safety_authorized": false,
+          "proposals_count": 3,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_HTN_HYPERKALEMIA",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": true
+        },
+        {
+          "case_id": "CASE_DENGUE_FEVER",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_ASTHMA_PROPRANOLOL",
+          "safety_authorized": false,
+          "proposals_count": 4,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_PEDIATRIC_VIRAL_ASPIRIN",
+          "safety_authorized": false,
+          "proposals_count": 5,
+          "citations_count": 2,
+          "shap_available": false
+        },
+        {
+          "case_id": "CASE_MISSING_CREATININE",
+          "safety_authorized": false,
+          "proposals_count": 2,
+          "citations_count": 2,
+          "shap_available": true
+        }
+      ]
+    }
+  }
+}

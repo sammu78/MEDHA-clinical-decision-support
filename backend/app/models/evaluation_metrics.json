@@ -1,0 +1,622 @@
+{
+  "type_2_diabetes_classification": {
+    "seed": 42,
+    "source_row_count": 2010,
+    "deduplicated_modeling_row_count": 1902,
+    "missing_value_counts": {
+      "age": 0,
+      "pre_glucose": 61,
+      "pre_creatinine": 65,
+      "pre_potassium": 61,
+      "pre_sodium": 61,
+      "pre_bun": 64
+    },
+    "cohort_name": "type_2_diabetes",
+    "task": "Medicine Classification",
+    "total_records": 1013,
+    "train_records": 685,
+    "test_records": 328,
+    "unique_patients_total": 34,
+    "unique_patients_train": 25,
+    "unique_patients_test": 9,
+    "candidate_medicines": [
+      "Insulin",
+      "Metoprolol",
+      "Furosemide",
+      "Lisinopril",
+      "Metformin",
+      "Hydralazine",
+      "Amlodipine",
+      "Glipizide"
+    ],
+    "baseline_accuracy": 0.732,
+    "model_accuracy": 0.732,
+    "model_balanced_accuracy": 0.143,
+    "model_macro_precision": 0.105,
+    "model_macro_recall": 0.143,
+    "model_macro_f1": 0.121,
+    "model_weighted_f1": 0.618,
+    "confusion_matrix": {
+      "labels": [
+        "Amlodipine",
+        "Furosemide",
+        "Glipizide",
+        "Hydralazine",
+        "Insulin",
+        "Lisinopril",
+        "Metformin",
+        "Metoprolol"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          15,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          240,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          61,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "per_class_report": {
+      "Amlodipine": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "Furosemide": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 15.0
+      },
+      "Glipizide": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "Hydralazine": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "Insulin": {
+        "precision": 0.7317073170731707,
+        "recall": 1.0,
+        "f1-score": 0.8450704225352113,
+        "support": 240.0
+      },
+      "Lisinopril": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "Metformin": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "Metoprolol": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 61.0
+      },
+      "accuracy": 0.7317073170731707,
+      "macro avg": {
+        "precision": 0.09146341463414634,
+        "recall": 0.125,
+        "f1-score": 0.1056338028169014,
+        "support": 328.0
+      },
+      "weighted avg": {
+        "precision": 0.5353955978584176,
+        "recall": 0.7317073170731707,
+        "f1-score": 0.6183442116111302,
+        "support": 328.0
+      }
+    },
+    "split_strategy": "Patient-level GroupShuffleSplit (Zero patient overlap)",
+    "limitations": [
+      "Trained on 100-patient MIMIC-IV demo subset.",
+      "Inpatient prescribing reflects hospital-specific formulary preference.",
+      "Billing diagnoses may represent secondary comorbidities.",
+      "Predicts historical prescribing patterns, not necessarily optimal or guideline-preferred treatment.",
+      "Severe class imbalance: macro metrics reveal that raw accuracy is driven by majority classes."
+    ]
+  },
+  "essential_hypertension_classification": {
+    "seed": 42,
+    "source_row_count": 2010,
+    "deduplicated_modeling_row_count": 1902,
+    "missing_value_counts": {
+      "age": 0,
+      "pre_glucose": 61,
+      "pre_creatinine": 65,
+      "pre_potassium": 61,
+      "pre_sodium": 61,
+      "pre_bun": 64
+    },
+    "cohort_name": "essential_hypertension",
+    "task": "Medicine Classification",
+    "total_records": 517,
+    "train_records": 376,
+    "test_records": 141,
+    "unique_patients_total": 61,
+    "unique_patients_train": 45,
+    "unique_patients_test": 16,
+    "candidate_medicines": [
+      "Metoprolol",
+      "Furosemide",
+      "Hydralazine",
+      "Insulin",
+      "Lisinopril",
+      "Amlodipine",
+      "Spironolactone"
+    ],
+    "baseline_accuracy": 0.262,
+    "model_accuracy": 0.291,
+    "model_balanced_accuracy": 0.153,
+    "model_macro_precision": 0.181,
+    "model_macro_recall": 0.153,
+    "model_macro_f1": 0.08,
+    "model_weighted_f1": 0.164,
+    "confusion_matrix": {
+      "labels": [
+        "Amlodipine",
+        "Furosemide",
+        "Hydralazine",
+        "Insulin",
+        "Lisinopril",
+        "Metoprolol",
+        "Spironolactone"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          50,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          14,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          37,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0
+        ]
+      ]
+    },
+    "per_class_report": {
+      "Amlodipine": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "Furosemide": {
+        "precision": 1.0,
+        "recall": 0.07407407407407407,
+        "f1-score": 0.13793103448275862,
+        "support": 54.0
+      },
+      "Hydralazine": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 14.0
+      },
+      "Insulin": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 12.0
+      },
+      "Lisinopril": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "Metoprolol": {
+        "precision": 0.27007299270072993,
+        "recall": 1.0,
+        "f1-score": 0.42528735632183906,
+        "support": 37.0
+      },
+      "Spironolactone": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 8.0
+      },
+      "accuracy": 0.2907801418439716,
+      "macro avg": {
+        "precision": 0.18143899895724713,
+        "recall": 0.15343915343915343,
+        "f1-score": 0.08045977011494253,
+        "support": 141.0
+      },
+      "weighted avg": {
+        "precision": 0.45384894134700005,
+        "recall": 0.2907801418439716,
+        "f1-score": 0.1644248797587022,
+        "support": 141.0
+      }
+    },
+    "split_strategy": "Patient-level GroupShuffleSplit (Zero patient overlap)",
+    "limitations": [
+      "Trained on 100-patient MIMIC-IV demo subset.",
+      "Inpatient prescribing reflects hospital-specific formulary preference.",
+      "Billing diagnoses may represent secondary comorbidities.",
+      "Predicts historical prescribing patterns, not necessarily optimal or guideline-preferred treatment.",
+      "Severe class imbalance: macro metrics reveal that raw accuracy is driven by majority classes."
+    ]
+  },
+  "heart_failure_classification": {
+    "seed": 42,
+    "source_row_count": 2010,
+    "deduplicated_modeling_row_count": 1902,
+    "missing_value_counts": {
+      "age": 0,
+      "pre_glucose": 61,
+      "pre_creatinine": 65,
+      "pre_potassium": 61,
+      "pre_sodium": 61,
+      "pre_bun": 64
+    },
+    "cohort_name": "heart_failure",
+    "task": "Medicine Classification",
+    "total_records": 368,
+    "train_records": 302,
+    "test_records": 66,
+    "unique_patients_total": 21,
+    "unique_patients_train": 15,
+    "unique_patients_test": 6,
+    "candidate_medicines": [
+      "Furosemide",
+      "Metoprolol",
+      "Spironolactone",
+      "Lisinopril",
+      "Hydralazine"
+    ],
+    "baseline_accuracy": 0.97,
+    "model_accuracy": 0.939,
+    "model_balanced_accuracy": 0.323,
+    "model_macro_precision": 0.323,
+    "model_macro_recall": 0.323,
+    "model_macro_f1": 0.323,
+    "model_weighted_f1": 0.939,
+    "confusion_matrix": {
+      "labels": [
+        "Furosemide",
+        "Hydralazine",
+        "Lisinopril",
+        "Metoprolol",
+        "Spironolactone"
+      ],
+      "matrix": [
+        [
+          62,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "per_class_report": {
+      "Furosemide": {
+        "precision": 0.96875,
+        "recall": 0.96875,
+        "f1-score": 0.96875,
+        "support": 64.0
+      },
+      "Hydralazine": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "Lisinopril": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "Metoprolol": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Spironolactone": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "accuracy": 0.9393939393939394,
+      "macro avg": {
+        "precision": 0.19375,
+        "recall": 0.19375,
+        "f1-score": 0.19375,
+        "support": 66.0
+      },
+      "weighted avg": {
+        "precision": 0.9393939393939394,
+        "recall": 0.9393939393939394,
+        "f1-score": 0.9393939393939394,
+        "support": 66.0
+      }
+    },
+    "split_strategy": "Patient-level GroupShuffleSplit (Zero patient overlap)",
+    "limitations": [
+      "Trained on 100-patient MIMIC-IV demo subset.",
+      "Inpatient prescribing reflects hospital-specific formulary preference.",
+      "Billing diagnoses may represent secondary comorbidities.",
+      "Predicts historical prescribing patterns, not necessarily optimal or guideline-preferred treatment.",
+      "Severe class imbalance: macro metrics reveal that raw accuracy is driven by majority classes."
+    ]
+  },
+  "insulin_sc_regression": {
+    "seed": 42,
+    "source_row_count": 2010,
+    "deduplicated_modeling_row_count": 1902,
+    "missing_value_counts": {
+      "age": 0,
+      "pre_glucose": 61,
+      "pre_creatinine": 65,
+      "pre_potassium": 61,
+      "pre_sodium": 61,
+      "pre_bun": 64
+    },
+    "medicine": "Insulin",
+    "route": "SC",
+    "unit": "UNIT",
+    "total_records": 420,
+    "train_records": 391,
+    "test_records": 29,
+    "unique_patients_total": 28,
+    "unique_patients_train": 21,
+    "unique_patients_test": 7,
+    "baseline_median_dose_mae": 11.97,
+    "baseline_median_dose_rmse": 14.33,
+    "baseline_median_dose_r2": -0.3383,
+    "model_dose_mae": 13.6,
+    "model_dose_rmse": 16.35,
+    "model_dose_r2": -0.7418,
+    "split_strategy": "Patient-level GroupShuffleSplit (Zero patient overlap)",
+    "limitations": [
+      "Historical dose in MIMIC reflects clinician empirical ordering, not randomized trial titration.",
+      "Evaluation on demo cohort is an exploratory research benchmark, not a clinical treatment validation.",
+      "Automated dose proposal remains gated by safety checker.",
+      "Negative R\u00b2 confirms model does not outperform test-set mean variance; dosing must not be autonomously displayed."
+    ]
+  },
+  "metoprolol_po_regression": {
+    "seed": 42,
+    "source_row_count": 2010,
+    "deduplicated_modeling_row_count": 1902,
+    "missing_value_counts": {
+      "age": 0,
+      "pre_glucose": 61,
+      "pre_creatinine": 65,
+      "pre_potassium": 61,
+      "pre_sodium": 61,
+      "pre_bun": 64
+    },
+    "medicine": "Metoprolol",
+    "route": "PO",
+    "unit": "mg",
+    "total_records": 287,
+    "train_records": 239,
+    "test_records": 48,
+    "unique_patients_total": 42,
+    "unique_patients_train": 31,
+    "unique_patients_test": 11,
+    "baseline_median_dose_mae": 29.82,
+    "baseline_median_dose_rmse": 45.83,
+    "baseline_median_dose_r2": -0.273,
+    "model_dose_mae": 32.31,
+    "model_dose_rmse": 43.63,
+    "model_dose_r2": -0.1537,
+    "split_strategy": "Patient-level GroupShuffleSplit (Zero patient overlap)",
+    "limitations": [
+      "Historical dose in MIMIC reflects clinician empirical ordering, not randomized trial titration.",
+      "Evaluation on demo cohort is an exploratory research benchmark, not a clinical treatment validation.",
+      "Automated dose proposal remains gated by safety checker.",
+      "Negative R\u00b2 confirms model does not outperform test-set mean variance; dosing must not be autonomously displayed."
+    ]
+  },
+  "furosemide_iv_regression": {
+    "seed": 42,
+    "source_row_count": 2010,
+    "deduplicated_modeling_row_count": 1902,
+    "missing_value_counts": {
+      "age": 0,
+      "pre_glucose": 61,
+      "pre_creatinine": 65,
+      "pre_potassium": 61,
+      "pre_sodium": 61,
+      "pre_bun": 64
+    },
+    "medicine": "Furosemide",
+    "route": "IV",
+    "unit": "mg",
+    "total_records": 371,
+    "train_records": 253,
+    "test_records": 118,
+    "unique_patients_total": 41,
+    "unique_patients_train": 30,
+    "unique_patients_test": 11,
+    "baseline_median_dose_mae": 77.2,
+    "baseline_median_dose_rmse": 107.34,
+    "baseline_median_dose_r2": -0.7493,
+    "model_dose_mae": 68.26,
+    "model_dose_rmse": 93.29,
+    "model_dose_r2": -0.3212,
+    "split_strategy": "Patient-level GroupShuffleSplit (Zero patient overlap)",
+    "limitations": [
+      "Historical dose in MIMIC reflects clinician empirical ordering, not randomized trial titration.",
+      "Evaluation on demo cohort is an exploratory research benchmark, not a clinical treatment validation.",
+      "Automated dose proposal remains gated by safety checker.",
+      "Negative R\u00b2 confirms model does not outperform test-set mean variance; dosing must not be autonomously displayed."
+    ]
+  }
+}

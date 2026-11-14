@@ -1,0 +1,175 @@
+{
+  "benchmark_version": "1.0.0",
+  "created_date": "2026-10-27",
+  "corpus_fingerprint": "15_guideline_chunks_icmr_cdsco_ada_nvbdcp",
+  "description": "Gold-standard retrieval evaluation benchmark containing clinically vetted query-evidence pairs.",
+  "queries": [
+    {
+      "query_id": "Q_T2D_RENAL",
+      "query_text": "What is the eGFR cutoff for Metformin contraindication in diabetic kidney disease?",
+      "clinical_topic": "Type 2 Diabetes Mellitus / Nephrology",
+      "intended_information_need": "Identify exact eGFR thresholds for Metformin dose reduction and absolute contraindication.",
+      "gold_chunk_ids": ["ICMR_T2D_01"],
+      "relevance_grades": {
+        "ICMR_T2D_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_T2D_INPATIENT_HYPO",
+      "query_text": "Inpatient hypoglycemia target and glucose threshold for holding insulin in hospitalized patients",
+      "clinical_topic": "Inpatient Glycemic Control",
+      "intended_information_need": "Hospital insulin titration targets and hypoglycemia rule of 15 rescue protocol.",
+      "gold_chunk_ids": ["ADA_T2D_INPATIENT", "ICMR_T2D_01"],
+      "relevance_grades": {
+        "ADA_T2D_INPATIENT": 2,
+        "ICMR_T2D_01": 1
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_HTN_INITIATION",
+      "query_text": "First-line antihypertensive drug choices and combination therapy for Indian adults",
+      "clinical_topic": "Essential Hypertension",
+      "intended_information_need": "Recommended initial single-agent or dual combination therapy for Stage 1 and Stage 2 hypertension.",
+      "gold_chunk_ids": ["IGH_IV_HTN_01"],
+      "relevance_grades": {
+        "IGH_IV_HTN_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_HTN_LISINOPRIL_RENAL",
+      "query_text": "Contraindications for Lisinopril including hyperkalemia and bilateral renal artery stenosis",
+      "clinical_topic": "Cardiovascular Safety / Pharmacology",
+      "intended_information_need": "Safety boundaries for ACE inhibitors regarding serum potassium, pregnancy, and renal artery stenosis.",
+      "gold_chunk_ids": ["CDSCO_ACEI_SAFETY", "IGH_IV_HTN_01"],
+      "relevance_grades": {
+        "CDSCO_ACEI_SAFETY": 2,
+        "IGH_IV_HTN_01": 1
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_MALARIA_TREATMENT",
+      "query_text": "Artemisinin-based combination therapy for acute Plasmodium falciparum malaria",
+      "clinical_topic": "Infectious Disease / Malaria",
+      "intended_information_need": "Standard national drug policy regimen for uncomplicated and severe malaria in India.",
+      "gold_chunk_ids": ["NVBDCP_MALARIA_01"],
+      "relevance_grades": {
+        "NVBDCP_MALARIA_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_TB_HEPATOTOXICITY",
+      "query_text": "First line anti-tubercular therapy drug-induced liver injury monitoring for Isoniazid and Rifampicin",
+      "clinical_topic": "Pulmonology / Tuberculosis",
+      "intended_information_need": "Daily fixed-dose combination anti-TB regimens and liver function test monitoring thresholds.",
+      "gold_chunk_ids": ["NTEP_TB_01"],
+      "relevance_grades": {
+        "NTEP_TB_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_DENGUE_NSAID",
+      "query_text": "Avoidance of NSAIDs and Aspirin in Dengue fever to prevent severe bleeding",
+      "clinical_topic": "Infectious Disease / Dengue",
+      "intended_information_need": "Absolute contraindication of antiplatelet/NSAID agents during acute dengue infection.",
+      "gold_chunk_ids": ["ICMR_DENGUE_01"],
+      "relevance_grades": {
+        "ICMR_DENGUE_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_PNEUMONIA_ANTIBIOTIC",
+      "query_text": "Empirical outpatient antibiotic regimen for community-acquired pneumonia",
+      "clinical_topic": "Respiratory / Pneumonia",
+      "intended_information_need": "First-line beta-lactam and macrolide empirical choices for community-acquired pneumonia.",
+      "gold_chunk_ids": ["ICMR_CAP_01"],
+      "relevance_grades": {
+        "ICMR_CAP_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_TYPHOID_AZITHROMYCIN",
+      "query_text": "Azithromycin dosing for uncomplicated enteric fever with fluoroquinolone resistance",
+      "clinical_topic": "Infectious Disease / Typhoid",
+      "intended_information_need": "Standard dose and duration for Azithromycin and Ceftriaxone in typhoid fever.",
+      "gold_chunk_ids": ["ICMR_TYPHOID_01"],
+      "relevance_grades": {
+        "ICMR_TYPHOID_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_ANEMIA_IRON",
+      "query_text": "Elemental iron dosage and parenteral iron sucrose for severe iron deficiency anemia",
+      "clinical_topic": "Hematology / Nutritional Anemia",
+      "intended_information_need": "Daily elemental iron targets and indications for intravenous iron sucrose under Anemia Mukt Bharat.",
+      "gold_chunk_ids": ["AMB_ANEMIA_01"],
+      "relevance_grades": {
+        "AMB_ANEMIA_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_DERM_TINEA",
+      "query_text": "Topical and systemic antifungal duration for extensive Tinea corporis and cruris",
+      "clinical_topic": "Dermatology / Mycology",
+      "intended_information_need": "Treatment guidelines for dermatophytosis avoiding topical corticosteroid misuse.",
+      "gold_chunk_ids": ["IADVL_TINEA_01"],
+      "relevance_grades": {
+        "IADVL_TINEA_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_DEFICIENCY_VITAMINS",
+      "query_text": "Therapeutic Ascorbic acid dosage for Scurvy and Cholecalciferol for nutritional Rickets",
+      "clinical_topic": "Endocrinology / Nutritional Deficiencies",
+      "intended_information_need": "Therapeutic replenishment doses for vitamin C deficiency and vitamin D rickets.",
+      "gold_chunk_ids": ["ICMR_NIN_MICRONUTRIENTS"],
+      "relevance_grades": {
+        "ICMR_NIN_MICRONUTRIENTS": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_ASTHMA_MAINTENANCE",
+      "query_text": "Low dose Inhaled Corticosteroid and Formoterol maintenance and reliever therapy for Asthma",
+      "clinical_topic": "Respiratory / Bronchial Asthma",
+      "intended_information_need": "Preferred controller therapy combining ICS with fast-acting LABA formoterol.",
+      "gold_chunk_ids": ["ICMR_ASTHMA_01"],
+      "relevance_grades": {
+        "ICMR_ASTHMA_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_ARTHRITIS_METHOTREXATE",
+      "query_text": "Methotrexate weekly dosing and folic acid supplementation in Rheumatoid Arthritis",
+      "clinical_topic": "Rheumatology / Autoimmune Disease",
+      "intended_information_need": "Initial weekly low-dose Methotrexate protocol and pregnancy contraindication in rheumatoid arthritis.",
+      "gold_chunk_ids": ["IRA_ARTHRITIS_01"],
+      "relevance_grades": {
+        "IRA_ARTHRITIS_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    },
+    {
+      "query_id": "Q_KALA_AZAR_AMPHOTERICIN",
+      "query_text": "Single dose Liposomal Amphotericin B for Indian Visceral Leishmaniasis",
+      "clinical_topic": "Tropical Diseases / Kala-Azar",
+      "intended_information_need": "Primary treatment recommendation for visceral leishmaniasis with liposomal amphotericin B.",
+      "gold_chunk_ids": ["NVBDCP_VL_01"],
+      "relevance_grades": {
+        "NVBDCP_VL_01": 2
+      },
+      "review_status": "VERIFIED_CLINICAL_BENCHMARK"
+    }
+  ]
+}
