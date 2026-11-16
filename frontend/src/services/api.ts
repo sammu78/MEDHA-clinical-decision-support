@@ -11,15 +11,21 @@ import type {
   DashboardMetrics
 } from "../types";
 
-const rawBaseUrl = import.meta.env.VITE_API_BASE_URL;
-const API_BASE_URL =
-  rawBaseUrl !== undefined && rawBaseUrl !== ""
+const rawBaseUrl = (import.meta.env.VITE_API_BASE_URL || "").trim();
+const normalizedUrl =
+  rawBaseUrl !== ""
     ? rawBaseUrl.startsWith("http://") || rawBaseUrl.startsWith("https://")
       ? rawBaseUrl
       : `https://${rawBaseUrl}`
     : import.meta.env.DEV
     ? "http://127.0.0.1:8000"
     : "";
+
+const API_BASE_URL = normalizedUrl.endsWith("/") ? normalizedUrl.slice(0, -1) : normalizedUrl;
+
+if (typeof window !== "undefined") {
+  console.log("[MEDHA API] Connected to Backend:", API_BASE_URL || "(relative)");
+}
 
 export async function checkBackendHealth(): Promise<{ status: string; service: string }> {
   const res = await fetch(`${API_BASE_URL}/health`);

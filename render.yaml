@@ -31,5 +31,5 @@ services:
         fromService:
           type: web
           name: medha-backend
-          property: host
+          envVarKey: RENDER_EXTERNAL_URL
 
